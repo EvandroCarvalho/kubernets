@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-portal-noticias
+  labels:
+    app: db-portal-noticias
+spec:
+  containers:
+  - name: db-noticias-container
+    image: aluracursos/mysql-db:1
+    resources:
+      limits:
+        memory: "512Mi"
+        cpu: "1"
+    ports:
+      - containerPort: 80
